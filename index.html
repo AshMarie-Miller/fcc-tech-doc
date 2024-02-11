@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ashley's Web Design | Technical Documentation Page</title>
+    </head>
+    <body>
+        <main id="main-doc">
+            <section class="main-section" id="Intro">
+                <header>
+                    <h1>Intro</h1>
+                </header>
+                <p>
+                    GIT is a version control system developed by Linus Torvalds in 2005 and maintained by Junio Hamano ever since. It is used to keep track of code changes and to let developers collaborate on code together through the use of repositories (repos) and branches.
+                </p>
+            </section>
+            <section class="main-section" id="Installing">
+                <header>
+                    <h1>Installing</h1>
+                </header>
+                <p>
+                    You can download GIT at <a href="https://git-scm.com/">https://git-scm.com</a> After installing, you can confirm it's installed by typing <code>git --version</code> in your CLI. It should show <span>git version x.y</span>
+                </p>
+                <p>
+                    You'll want to configure GIT with your username and email. You can do that by typing <code>git config --global user.name "FirstName LastName"</code> and <code>git config --global user.email "UserName@Email.com"</code>
+                </p>
+            </section>
+            <section class="main-section" id="Creating_a_Local_Repo">
+                <header>
+                    <h1>Creating a Local Repo</h1>
+                </header>
+                <p>
+                    Create a directory and/or navigate to the directory you want to use GIT with in your CLI. Type <code>git init</code> in your CLI. You now have what's called a local repo (repository). Git created a hidden folder that keeps track of code changes.
+                </p>
+            </section>
+            <section class="main-section" id="Adding_Files_to_Staging_Environment">
+                <header>
+                    <h1>Adding Files to Staging Environment</h1>
+                </header>
+                <p>
+                    If you type <code>git status</code> in your CLI, it should show <span>On branch master No commits yet</span> Add at least one file to the directory and type <code>git status</code> again. This time, it should show <span>On branch master No commits yet Untracked Files:</span> and you should see the file(s) you added to the directory. Now GIT knows about the files, but they haven't been added to your repo yet.
+                </p>
+                <p>
+                    Type <code>git add</code> and the name of the file you want to add. You can also type <code>git add .</code> to add all the files. Now when you type <code>git status</code> it should show <span>On branch master No commits yet Changes to be committed:</span> and show the file(s) you added. The file(s) have been added to what's called a staging environment and are ready to be added to your repo!
+                </p>
+            </section>
+            <section class="main-section" id="Adding_Files_to_Repo">
+                <header>
+                    <h1>Adding Files to Repo</h1>
+                </header>
+                <p>
+                    Now it's time to move the file(s) in the staging environment to the repo. This is called adding a commit. Think of a commit as a "Save Point". To commit type <code>git commit -m "Added files to repo"</code> The m in the line above stands for message. You should always add a message to your commit describing the changes you made. If you type <code>git log</code> in your CLI, you can see a list of your commits (you'll only have one for now).
+                </p>
+            </section>
+            <section class="main_section" id="Working_on_Branches">
+                <header>
+                    <h1>Working on Branches</h1>
+                </header>
+                <p>
+                    A branch is a new version of the main repo where you can work on a new feature without making changes to the main branch. You can have one or multiple branches. When you finish the new feature, you can merge the feature branch with the main branch. 
+                </p>
+                <p>
+                    To create a new branch, type <code>git branch new-feature</code> in your CLI. You can call your new branch whatever you want. To confirm it was created, type <code>git branch</code> in your CLI again. It should show <span>new-feature * master</span> The * by master means that that is the current branch. To change branches type <code>git checkout new-feature</code> in your CLI, and it should show <span>Switched to branch 'new-feature'</span> Now you can add files to this branch just like you did to the master branch before. After you've committed your changes, your new feature-branch will be different from your master branch, and you can merge the two branches.
+                </p>
+            </section>
+            <section class="main_section" id="Merging_Branches">
+                <header>
+                    <h1>Merging Branches</h1>
+                </header>
+                <p>
+                    To merge the new-feature and master branches, first switch back to the master branch by typing <code>git checkout master</code> in your CLI. It should show <span>Switched to branch 'master'</span> Now type <code>git merge new-feature</code> It should show <span>Updating</span> followed by the changes that were made. After you've merged the two branches, you can safely delete the new-feature branch by typing <code>git branch -d new-feature</code> in your CLI. It should show <span>Deleted branch new-feature</span>
+                </p>
+            </section>
+            <section class="main_section" id="Merging_Conflicts">
+                <header>
+                    <h1>Merging Conflicts</h1>
+                </header>
+                <p>Something your may run into from time to time is merging conflicts. Sometimes you may have multiple branches going at the same time. After you've merged one with the master branch, when you go to merge another one with the master branch, your CLI will say <span>Auto-merging [...] CONFLICT (content):</span> followed by the name of the file(s) where the merge conflict was found. You'll have to open the file(s), see the differences between the two versions, and edit the file(s) the way you want before being able to commit the file(s) to your repo and complete the merge.</p>
+            </section>
+        </main>
+    </body>
+</html>
