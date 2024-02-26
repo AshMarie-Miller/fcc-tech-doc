@@ -5,8 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Ashley's Web Design | Technical Documentation Page</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <nav id="navbar">
+            <header>
+                <h1>GIT</h1>
+            </header>
+            <a class="nav-link" href="#Intro">Intro</a>
+            <a class="nav-link" href="#Installing">Installing</a>
+            <a class="nav-link" href="#Creating_a_Local_Repo">Creating a Local Repo</a>
+            <a class="nav-link" href="#Adding_Files_to_Staging">Adding Files to Staging</a>
+            <a class="nav-link" href="#Adding_Files_to_Repo">Adding Files to Repo</a>
+            <a class="nav-link" href="#Working_on_Branches">Working on Branches</a>
+            <a class="nav-link" href="#Merging_Branches">Merging Branches</a>
+            <a class="nav-link" href="#Merging_Conflicts">Merging Conflicts</a>
+        </nav>
         <main id="main-doc">
             <section class="main-section" id="Intro">
                 <header>
@@ -15,6 +33,16 @@
                 <p>
                     GIT is a version control system developed by Linus Torvalds in 2005 and maintained by Junio Hamano ever since. It is used to keep track of code changes and to let developers collaborate on code together through the use of repositories (repos) and branches.
                 </p>
+                <p>After following along with this technical documentation page you will know how to:</p>
+                <ul>
+                    <li>Install GIT</li>
+                    <li>Create a local repo</li>
+                    <li>Add files to staging environment</li>
+                    <li>Add files to repo</li>
+                    <li>Work on branches</li>
+                    <li>Merge branches</li>
+                    <li>Handle merge conflicts</li>
+                </ul>
             </section>
             <section class="main-section" id="Installing">
                 <header>
@@ -35,9 +63,9 @@
                     Create a directory and/or navigate to the directory you want to use GIT with in your CLI. Type <code>git init</code> in your CLI. You now have what's called a local repo (repository). Git created a hidden folder that keeps track of code changes.
                 </p>
             </section>
-            <section class="main-section" id="Adding_Files_to_Staging_Environment">
+            <section class="main-section" id="Adding_Files_to_Staging">
                 <header>
-                    <h1>Adding Files to Staging Environment</h1>
+                    <h1>Adding Files to Staging</h1>
                 </header>
                 <p>
                     If you type <code>git status</code> in your CLI, it should show <span>On branch master No commits yet</span> Add at least one file to the directory and type <code>git status</code> again. This time, it should show <span>On branch master No commits yet Untracked Files:</span> and you should see the file(s) you added to the directory. Now GIT knows about the files, but they haven't been added to your repo yet.
