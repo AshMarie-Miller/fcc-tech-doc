@@ -82,7 +82,7 @@
                     Now it's time to move the file(s) in the staging environment to the repo. This is called adding a commit. Think of a commit as a "Save Point". To commit type <code>git commit -m "Added files to repo"</code> The m in the line above stands for message. You should always add a message to your commit describing the changes you made. If you type <code>git log</code> in your CLI, you can see a list of your commits (you'll only have one for now).
                 </p>
             </section>
-            <section class="main_section" id="Working_on_Branches">
+            <section class="main-section" id="Working_on_Branches">
                 <header>
                     <h1>Working on Branches</h1>
                 </header>
@@ -93,7 +93,7 @@
                     To create a new branch, type <code>git branch new-feature</code> in your CLI. You can call your new branch whatever you want. To confirm it was created, type <code>git branch</code> in your CLI again. It should show <span>new-feature * master</span> The * by master means that that is the current branch. To change branches type <code>git checkout new-feature</code> in your CLI, and it should show <span>Switched to branch 'new-feature'</span> Now you can add files to this branch just like you did to the master branch before. After you've committed your changes, your new feature-branch will be different from your master branch, and you can merge the two branches.
                 </p>
             </section>
-            <section class="main_section" id="Merging_Branches">
+            <section class="main-section" id="Merging_Branches">
                 <header>
                     <h1>Merging Branches</h1>
                 </header>
@@ -101,7 +101,7 @@
                     To merge the new-feature and master branches, first switch back to the master branch by typing <code>git checkout master</code> in your CLI. It should show <span>Switched to branch 'master'</span> Now type <code>git merge new-feature</code> It should show <span>Updating</span> followed by the changes that were made. After you've merged the two branches, you can safely delete the new-feature branch by typing <code>git branch -d new-feature</code> in your CLI. It should show <span>Deleted branch new-feature</span>
                 </p>
             </section>
-            <section class="main_section" id="Merging_Conflicts">
+            <section class="main-section" id="Merging_Conflicts">
                 <header>
                     <h1>Merging Conflicts</h1>
                 </header>
